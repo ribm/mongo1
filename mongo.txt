@@ -1,0 +1,38 @@
+db.class.find({"name":"Arun"})
+{ "_id" : ObjectId("5f55f501deb2e8d807a7106b"), "name" : "Arun", "subject" : "Chemistry", "primaryaddress" : "Bhoteal", "Fav_teacher" : "Rajesh tukdev", "age" : 28 }
+
+
+
+db.class.update({"name":"vijay"},{$set:{"primaryaddress":"Delhi"}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+
+
+
+
+db.class.find({"age":{$gt:12}})
+{ "_id" : ObjectId("5f55c5ebdeb2e8d807a71061"), "name" : "RAHUL", "subject" : "Maths", "primaryaddress" : "Chennai", "Fav_teacher" : "Goswami", "age" : 50 }
+{ "_id" : ObjectId("5f55c60ddeb2e8d807a71062"), "name" : "Ranjan", "subject" : "geo", "primaryaddress" : "Egmore", "Fav_teacher" : "Venket", "age" : 51 }
+{ "_id" : ObjectId("5f55c64cdeb2e8d807a71063"), "name" : "Gayatri", "subject" : "Comp_science", "primaryaddress" : "Basant_beach", "Fav_teacher" : "Sub_swamy", "age" : 55 }
+{ "_id" : ObjectId("5f55c7d7deb2e8d807a71064"), "name" : "Prasant", "subject" : "Comp_science", "primaryaddress" : "ab_nagar", "Fav_teacher" : "swamy", "age" : 13 }
+{ "_id" : ObjectId("5f55ca6bdeb2e8d807a71065"), "name" : "VVK", "subject" : "Astrology", "primaryaddress" : "guindy", "Fav_teacher" : "Aurn_praksh", "age" : 18 }
+{ "_id" : ObjectId("5f55ca92deb2e8d807a71066"), "name" : "Karan", "subject" : "Acting", "primaryaddress" : "Pune", "Fav_teacher" : "Nilesh_gule", "age" : 28 }
+{ "_id" : ObjectId("5f55caeddeb2e8d807a71067"), "name" : "Kshitj", "subject" : "Chemistry", "primaryaddress" : "Bhopal", "Fav_teacher" : "Rajesh tukdev", "age" : 24 }
+{ "_id" : ObjectId("5f55cb03deb2e8d807a71068"), "name" : "Ranjan", "subject" : "Chemistry", "primaryaddress" : "Bhopal", "Fav_teacher" : "Rajesh tukdev", "age" : 27 }
+{ "_id" : ObjectId("5f55f427deb2e8d807a71069"), "name" : "Ranjan", "subject" : "Chemistry", "primaryaddress" : "Bhopal", "Fav_teacher" : "Rajesh tukdev", "age" : 27 }
+{ "_id" : ObjectId("5f55f455deb2e8d807a7106a"), "name" : "apurva", "subject" : "Chemistry", "primaryaddress" : "Bhoteal", "Fav_teacher" : "Rajesh tukdev", "age" : 28 }
+{ "_id" : ObjectId("5f55f501deb2e8d807a7106b"), "name" : "Arun", "subject" : "Chemistry", "primaryaddress" : "Bhoteal", "Fav_teacher" : "Rajesh tukdev", "age" : 28 }
+{ "_id" : ObjectId("5f55f697deb2e8d807a7106c"), "name" : "vijay", "subject" : "Chemistry", "primaryaddress" : "Delhi", "Fav_teacher" : "Rajesh tukdev", "age" : 28 }
+
+
+
+db.class.find({name:"vijay"},{"Fav_teacher":1})
+{ "_id" : ObjectId("5f55f697deb2e8d807a7106c"), "Fav_teacher" : "Rajesh tukdev" }
+
+
+db.class.count()
+12
+
+db.class.find({primaryaddress:"Chennai"}).count()
+2
+db.class.find({Fav_teacher:"Anitha"}).count()
+1
